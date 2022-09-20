@@ -1,0 +1,23 @@
+/* 배경 노랑색 글자 초록색 */
+/* h3 글자 파란색 */
+
+body {
+    background-color: rgb(133, 162, 219);
+    color: rgb(45, 96, 205);
+}
+
+h3 {
+    color: blue;
+}
+
+button {
+    background: rgb(130, 120, 70);
+    color: rgb(215, 215, 210);
+    font-style: italic;
+    font-weight: bold;
+}
+input {
+    text-align: center;
+    background: rgb(130, 120, 70);
+    color: rgb(215, 215, 210);
+}

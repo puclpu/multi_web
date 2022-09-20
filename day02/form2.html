@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="out0.css">
+    <style>
+        textarea {
+            background: aquamarine;
+        }
+        #find {
+            background: black;
+            color: white;
+        }
+        .login {
+            background: blue;
+            border-color: aquamarine;
+        }
+        #namebox {
+            background: navajowhite;
+            color: navy;
+        }
+        .sign {
+            background: sandybrown;
+            color: salmon;
+        }
+        .signdate {
+            background: beige;
+            color: brown;
+        }
+        #numb {
+            background: blueviolet;
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <form action="search">
+        <h3>검색할 단어를 입력하세요.</h3> <hr>
+        검색할 단어 <input type="text" name="find" id="find"> <button>검색시작</button>
+    </form>
+    <hr>
+    <form action="check">
+        <h3>로그인화면</h3>
+        아이디 <input type="text" name="id" class="login">
+        패스워드 <input type="password" name="pw" class="login">
+        <input type="submit" value="로그인처리">
+        <!-- 이클립스 단축키 : 한줄복사! : ctrl + alt + 화살표(아래) -->
+        <!-- 이클립스 단축키 : 한줄삭제! : ctrl + d -->
+        <!-- 이클립스 단축키 : 한줄이동! : alt + 화살표(아래) -->
+        <!-- 이클립스 단축키 : 여러줄인 경우 블록을 머저 잡고 + 위에 단축키 -->
+        <!-- ctrl + / : 자동주석 -->
+    </form>
+    <hr>
+    <form action="member">
+        <h3>회원가입화면</h3>
+        가입할 id <input type="text" name="id" class="sign"> <br>
+        가입할 pw <input type="text" name="pw" class="sign"> <br>
+        가입할 이름 <input type="text" name="name" id="namebox"> <br>
+        성별 <input type="radio" name="gender" value="woman" checked > 여성
+            <input type="radio" name="gender" value="man" > 남성
+        <br>
+        취미 <input type="checkbox" name="hobby" value="run"> 달리기
+            <input type="checkbox" name="hobby" value="youtube"> 동영상보기
+            <input type="checkbox" name="hobby" value="internet"> 인터넷서핑
+        <br>
+        전화번호 통신사 <select name="tel">
+            <option value="sktelecom">SKT</option>
+            <option value="etc" selected>알뜰폰</option>
+            <option value="lgtelecom">LGT</option>
+        </select> 
+        <input type="number" name="number" placeholder="-없이 숫자로 이어쓰세요" id="numb">
+        <br>
+        생년월일 <input type="date" class="signdate"> <br>
+        가입한 시기 <input type="datetime_local" class="signdate"> <br>
+        가입한 주 <input type="week" name="week" class="signdate">
+        <br>
+        하고싶은말<textarea name="word" 
+                         cols="30"
+                         rows="5"
+                         placeholder="100글자 이내로 써주세요"
+                         ></textarea>
+    </form>
+    
+</body>
+</html>

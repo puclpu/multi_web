@@ -1,0 +1,13 @@
+td {
+    text-align: center;
+    background: yellow;
+}
+
+input {
+    background: pink;
+}
+
+button {
+    background: white;
+    color: green;
+}

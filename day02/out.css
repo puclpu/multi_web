@@ -1,0 +1,9 @@
+body {
+    /* 속성명 : 속성값; */
+    /* : - 콜론, ; : 세미콜론 */
+    background-color: lime;
+    color: black;
+
+}
+
+/* body라는 태그를 만나면 배경색은 darkred, 글자색은 aquamarine */
