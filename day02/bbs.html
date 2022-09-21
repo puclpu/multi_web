@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 15px;
+            font-size: bold;
+            color: blue;
+        }
+
+        #total {
+            width: 800px;
+            height: 500px;
+            background-color: lightcyan;
+        }
+
+        #top {
+            width: 800px;
+            height: 100px;
+            background-color: aqua;
+            padding: 2px;
+        }
+
+        #center {
+            width: 800px;
+            height: 500px;
+            padding: 30px;
+            /* 안쪽 여백 4군데 설정 */
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+            border-radius: 50px;
+            /* background-color: yellow; */
+        }
+
+        /* ul의 li가 child! child중에서 몇번째인지 지정 */
+        /* 2n : 2의 배수 = 짝수 */
+        li:nth-child(2n) {
+            background-color: orange;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: yellow;
+        }
+
+        #top2 {
+            background-color: black;
+            color: yellow;
+            border-radius: 250px 10px;
+            width: 250px;
+            height: 100px;
+            position: fixed;
+            top: 10px;
+            right: 5px;
+            text-align: center;
+        }
+
+        .menu {
+            background: white;
+            color: blue;
+        }
+
+        #ttop1 {
+            background: greenyellow;
+        }
+
+        #ttop2 {
+            background: greenyellow;
+        }
+
+        button:hover {
+            background: green;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+            background: yellow;
+        }
+
+        input {
+            background: pink;
+        }
+
+        button {
+            background: white;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="member.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="product.html">제품정보</a>
+                </li>
+                <li>
+                    <a href="bbs.html">게시판</a>
+                </li>
+                <li>
+                    <a href="basket.html">장바구니</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2">장바구니</div>
+        <div id="center">
+            <form action="write">
+                <table border="1">
+                    <tr>
+                        <td id="ttop1">항목</td>
+                        <td id="ttop2">입력</td>
+                    </tr>
+                    <tr>
+                        <td class="menu">번호</td>
+                        <td><input type="number" name="num"></td>
+                    </tr>
+                    <tr>
+                        <td class="menu">제목</td>
+                        <td><input type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td class="menu">내용</td>
+                        <td><input type="content" name="content"></td>
+                    </tr>
+                    <tr>
+                        <td class="menu">작성자</td>
+                        <td><input type="writer" name="writer"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button style="font-size: 25px;">글쓰기 완료</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
