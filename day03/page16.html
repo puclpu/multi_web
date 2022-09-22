@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function plus() {
+            // 입력(데이터 처리하기 위해 가져오기)
+            n1 = document.getElementById('n1').value
+            n2 = document.getElementById('n2').value
+            //처리(숫자변환 -> 더하기)
+            n1 = parseInt(n1) // 비파괴함수
+            n2 = parseInt(n2)
+            sum = n1 + n2
+            //출력
+            alert(sum)
+        }
+        function login() {
+            user = document.getElementById('user').value
+            pw = document.getElementById('pw').value
+
+            if (user == 'root' && pw == '1234') {
+                // result = '로그인 성공'
+                result = '<img src=ok.png width=250 height=250>'
+            } else {
+                // result = '로그인 실패'
+                result = '<img src=no.gif width=250 height=250>'
+            }
+
+            // id = d1에 html로 result 넣기
+            // d1.innerHTML = '<font color=red>' + result + '</font>'
+            d1.innerHTML = result
+
+        }
+    </script>
+</head>
+<body>
+    숫자1 : <input type="text" id="n1"> <br>
+    숫자2 : <input type="text" id="n2"> <br>
+    <button onclick="plus()" style="background-color: aquamarine;">더하기</button>
+    <hr>
+    아아디: <input type="text" id="user"> <br>
+    패스워드: <input type="text" id="pw"> <br>
+    <button onclick="login()">로그인처리</button>
+    <hr>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
