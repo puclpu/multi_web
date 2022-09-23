@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+         $(function(){ // 익명함수
+            $('#b1').click(function() {
+                $('#result').append('<img src="ok.png"width=100px height=100px><br>')
+            })
+            $('#b2').click(function() {
+                com1 = $('#com1').val()
+                $('#result').append(com1 + "<br>")
+            })
+            $('#b3').click(function(){
+                com2 = $('#com2').val()
+                $('#result').append("<img src='ok.png'width=100px height=100px>")
+                $('#result').append(com2 + "<br>")
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button id="b1">이미지 추가</button> <br>
+    댓글1 : <input type="text" id="com1">
+    <button id="b2">댓글 추가</button> <br>
+    댓글2 : <input type="text" id="com2">
+    <button id="b3">이미지+댓글 추가</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

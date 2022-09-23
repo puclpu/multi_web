@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#b1').click(function(){
+                // 입력
+                paccount = $('#paccount').val()
+                pmethod = $('#pmethod').val()
+                // 처리
+                if (pmethod == '계좌이체') {
+                    paccount = paccount * 0.8
+                }
+                else if(pmethod == '신용카드') {
+                    paccount = paccount * 0.9
+                }
+                else {
+                    paccount = paccount 
+                }
+                // 출력
+                $('#result').html(paccount)
+            })
+
+            $('#b2').click(function(){
+                // 입력
+                user = $('#user').val()
+                // 처리
+                if(user == 'apple' || user == 'root') {
+                    idpos = '중복된 id 입니다.'
+                }
+                else {
+                     idpos = '사용 가능한 id 입니다.'
+                }
+                // 출력
+                $('#result').html(idpos)
+            })
+            $('#b3').click(function(){
+                $('#b3').click(function(){
+                    tel = $('#tel').val()
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    결제금액 : <input type="text" id="paccount"> <br>
+    1)계좌이체 2)신용카드 3)휴대폰결제 <br>
+    결제수단 : <input type="text" id="pmethod"> 
+    <button id="b1">결제하기</button> <br>
+    <hr>
+    회원가입할 id입력: <input type="text" id="user">
+    <button id="b2">회원가입시 id 중복체크</button><br>
+    <hr>
+    인증받을 전화번호 입력 : <input type="number" id="phone">
+    <button id="b3">인증번호 받기</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

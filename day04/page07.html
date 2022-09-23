@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 버튼을 클릭했을 때 처리할 내용
+            $('#b1').click(function(){
+                // 비동기통신(ajax)을 해라.
+                $.ajax({
+                    url : 'ok.html',
+                    success : function (res) {
+                        // alert('응답받은 데이터는 ' + res)
+                        $('#d1').html(res)
+                    }
+
+                })
+            })
+            $('#b2').click(function () {
+                $.ajax({
+                    url : 'tour.html',
+                    success : function (res) {
+                        // alert(res)
+                        $('#d2').html(res)
+                    }
+                })
+            })
+            $('#b3').click(function () {
+                $.ajax({
+                    url : 'weather.html',
+                    success : function (res) {
+                        // alert(res)
+                        $('#d3').html(res)
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="b1">ok.html로 비동기통신</button> <br>
+    <button id="b2">tour.html 비동기통신</button> <br>
+    <button id="b3">weather.html 비동기통신</button> <br>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+</html>
